@@ -1,4 +1,4 @@
-package com.example.android.myapplication;
+import java.sql.Timestamp;
 
 public class Waggle {
     private String waggle_id;
@@ -32,13 +32,13 @@ public class Waggle {
     }
 
     public String getDate_created() {
-        return date_created;
-    }
-
-    public void setDate_created(String date_created) {
-        this.date_created = date_created;
-    }
-
+		return date_created;
+	}
+    
+    public void setDate_created(String string) {
+		this.date_created = string;
+	}
+    
     public String getLocation() {
         return location;
     }
@@ -46,4 +46,12 @@ public class Waggle {
     public void setLocation(String location) {
         this.location = location;
     }
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return getWaggle_id();
+	}
+    
+    
 }

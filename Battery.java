@@ -1,5 +1,3 @@
-package com.example.android.myapplication;
-
 public class Battery {
     private String waggle_id;
     private int battery_status;
