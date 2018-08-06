@@ -31,12 +31,19 @@ public class WaggleList {
 		}
 		
 		list.getSelectionModel().addListSelectionListener(e -> {
+			
 			Waggle w = list.getSelectedValue();
-			String txt = "<html>";
-			txt += "ID : ";
-			txt += "";
-			label.setText("ID : " + w.getWaggle_id() + "\nlocation : "
-					+ w.getLocation());
+			String txt = "<html><br>";
+			txt += "ID : " + w.getWaggle_id() + "<br>";
+			txt += "Longitude : " + w.getLongitude() + "<br>";
+			txt += "Latitude : " + w.getLatitude() + "<br>";
+			txt += "Created Date : " + w.getDate_created() + "<br>";
+			txt += "Location : " + w.getLocation() + "<br>";
+			txt += "<html>";
+			label.setText(txt);
+			
+			String id = w.getWaggle_id();
+			
 		});
 
 		splitPane.setLeftComponent(new JScrollPane(list));
